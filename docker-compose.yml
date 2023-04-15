@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  composer-guardian:
+    image: flightlesstux/composer-guardian
+    volumes:
+      - /path/to/your/composer.json:/app/composer.json
+    environment:
+      - COMPOSER_FILE_PATH=/app/composer.json
+      - SLACK_WEBHOOK_URL=<slack-webhook-url>
